@@ -1,34 +1,45 @@
 include: package:flutter_lints/flutter.yaml
 
 analyzer:
+  # Generated code.
   exclude:
     - '**/*.freezed.dart'
     - '**/*.g.dart'
     - '**/*.tailor.dart'
 
+  # Type safety.
   language:
     strict-casts: true
     strict-inference: true
     strict-raw-types: true
 
   errors:
+    # Imports.
     always_use_package_imports: error
     avoid_relative_lib_imports: error
+
+    # Correctness.
     avoid_slow_async_io: error
     invalid_use_of_visible_for_testing_member: error
     valid_regexps: error
 
 linter:
   rules:
+    # Imports.
     always_use_package_imports: true
     avoid_relative_lib_imports: true
+
+    # Const usage.
     prefer_const_constructors: true
     prefer_const_declarations: true
     prefer_const_literals_to_create_immutables: true
+
+    # Style.
     prefer_single_quotes: true
     require_trailing_commas: true
 
 dcm:
+  # Generated code.
   exclude:
     rules:
       - '**/*.freezed.dart'
@@ -36,26 +47,39 @@ dcm:
       - '**/*.tailor.dart'
 
   rules:
+    # Lifecycle and state.
     - always-remove-listener
+    - use-setstate-synchronously
+
+    # Imports and parameters.
     - avoid-duplicate-named-imports
-    - avoid-expanded-as-spacer
-    - avoid-nested-conditional-expressions
-    - avoid-shrink-wrap-in-lists
-    - avoid-throw-in-catch-block
-    - avoid-unnecessary-conditionals
-    - avoid-unnecessary-stateful-widgets
-    - avoid-unnecessary-type-assertions
-    - avoid-unnecessary-type-casts
     - avoid-unused-parameters
-    - avoid-wrapping-in-padding
+
+    # Async and error handling.
+    - avoid-throw-in-catch-block
+    - prefer-async-await
+
+    # Conditions and control flow.
+    - avoid-nested-conditional-expressions
+    - avoid-unnecessary-conditionals
     - no-boolean-literal-compare
     - no-empty-block
     - no-equal-then-else
-    - prefer-async-await
-    - prefer-commenting-analyzer-ignores
-    - prefer-correct-edge-insets-constructor
+    - prefer-immediate-return
+
+    # Types and collections.
+    - avoid-unnecessary-type-assertions
+    - avoid-unnecessary-type-casts
     - prefer-enums-by-name
     - prefer-first
-    - prefer-immediate-return
     - prefer-last
-    - use-setstate-synchronously
+
+    # Flutter UI.
+    - avoid-expanded-as-spacer
+    - avoid-shrink-wrap-in-lists
+    - avoid-unnecessary-stateful-widgets
+    - avoid-wrapping-in-padding
+    - prefer-correct-edge-insets-constructor
+
+    # Analyzer suppressions.
+    - prefer-commenting-analyzer-ignores
