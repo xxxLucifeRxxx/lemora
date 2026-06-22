@@ -1,0 +1,59 @@
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Editors and IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+*.swp
+*.swo
+.history/
+.vscode/settings.json
+
+# Local agent instructions
+AGENTS.md
+
+# Dart and Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+**/doc/api/
+**/ios/Flutter/.last_build_id
+
+# Build and test artifacts
+/build/
+/coverage/
+**/failures/*.png
+*.log
+app.*.symbols
+app.*.map.json
+
+# Local Flutter SDK managed by FVM
+.fvm/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+secrets.yaml
+*.secrets.yaml
+credentials.json
+service-account*.json
+
+# Local tooling
+.mason/
+mason-lock.json
+tools/bricks/**/hooks/build/
+tools/bricks/**/*.dill
+
+# Temporary files
+*.class
+*.pyc
+.build/
+.buildlog/
+migrate_working_dir/

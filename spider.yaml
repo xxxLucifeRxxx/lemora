@@ -1,0 +1,14 @@
+# Generated asset references are stored in lib/app/resources.
+generate_tests: false
+no_comments: true
+export: true
+use_part_of: true
+package: app/resources
+
+groups:
+  - path: assets/icons
+    class_name: AppIcons
+    types: [.svg]
+  - path: assets/images
+    class_name: AppImages
+    types: [.webp, .png]

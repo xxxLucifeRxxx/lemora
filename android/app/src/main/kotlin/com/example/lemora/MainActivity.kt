@@ -1,0 +1,5 @@
+package com.example.lemora
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity : FlutterActivity()
